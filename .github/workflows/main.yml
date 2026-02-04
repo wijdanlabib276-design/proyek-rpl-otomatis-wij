@@ -1,0 +1,13 @@
+name: Alur-Otomatis-RPL
+on:
+  push:
+    branches: [ main ]
+jobs:
+  tahap-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy ke GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # Mengambil semua file di repo untuk jadi website
